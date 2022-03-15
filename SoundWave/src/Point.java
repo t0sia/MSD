@@ -11,7 +11,7 @@ public class Point {
 	public float pressure;
 	public static Integer []types ={0,1,2};
 	int type = 0;
-	int sinInput;
+	int sinInput = 0;
 
 	public Point() {
 		clear();
@@ -44,6 +44,7 @@ public class Point {
 		if (type == 2){
 			double radians =Math.toRadians(sinInput);
 			pressure =(float)(Math.sin(radians));
+			sinInput = (sinInput + 30) % 360;
 		}
 	}
 
