@@ -42,7 +42,7 @@ public class Point {
 		// TODO: pressure update
 		if (type == 0) pressure = pressure - (nVel + sVel + eVel + wVel)/2;
 		if (type == 2){
-			double radians =Math.toRadians(sinInput);
+			double radians = Math.toRadians(sinInput);
 			pressure =(float)(Math.sin(radians));
 			sinInput = (sinInput + 30) % 360;
 		}
